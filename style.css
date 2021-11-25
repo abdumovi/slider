@@ -8,43 +8,49 @@ img{
   height: 100%;
   object-fit: cover;
 }
+body{
+  background-repeat: no-repeat;
+  background-image: url('./img/bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
 .container{
-  max-width: 1500px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slider{
-  overflow: hidden;
-  display: flex;
   position: relative;
-  height: 700px;
-  
+  overflow: hidden;
+}
+.next{
+  position: absolute;
+  top: 0;
+  height: 99%;
+  right: 0;
+  width: 50px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.466);
+  cursor: pointer;
+}
+.last{
+  position: absolute;
+  top: 0;
+  height: 99%;
+  left: 0;
+  width: 50px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.466);
+  cursor: pointer;
 }
 .item{
-  position: absolute;
-  min-height: 700px;
-  width: 100%;
-  font-size: 50px;
-  text-align: center;
-  font-weight: 600;
-  line-height: 700px;
-  transition: all .5s ease;
+ max-width: 700px;
+ display: none;
 }
-.item:nth-child(1){
-  background-color: #15ff00;
-}
-.item:nth-child(2){
-  background-color: #001aff;
-}
-.item:nth-child(3){
-  background-color: #ffee00;
-}
-.item:nth-child(4){
-  background-color: #d900fffd;
-}
-.item:nth-child(5){
-  background-color: #7700ff;
-}
-.item:nth-child(6){
-  background-color: #ff7300;
+.active{
+  display: block;
 }
